@@ -10,25 +10,27 @@ const Megamenu = () => {
     const categories = [
         {
             name: 'Eletronicos',
-            href: '/electronicos'
+            slug: 'electronicos'
         },
         {
             name: 'Hogar',
-            href: '/hogar'
+            slug: 'hogar'
         }
     ]
 
     return (
-        <div className='megamenu flex items-center bg-black w-full py-3 px-8'>
+        <div className='megamenu flex items-center bg-white w-full py-3 px-8'>
             <div className="left w-full">
                 {/* <Sidebar /> */}
                 <div>
-                    <h1 className='font-medium text-xl text-white'>Ecommerce</h1>
+                    <a href="/">
+                        <h1 className='font-medium text-xl text-black'>Ecommerce</h1>
+                    </a>
                 </div>
             </div>
             <div className='w-full flex justify-end'>
                 <nav>
-                    <ul className='flex items-center gap-6 text-white focus:outline-none hover:text-blue-700'>
+                    <ul className='flex items-center gap-6 text-black font-medium'>
                         <li>
                             <a href="/">Inicio</a>
                         </li>
@@ -60,7 +62,7 @@ const Megamenu = () => {
                                                     {categories.map((category) => (
                                                         <a
                                                             key={category.name}
-                                                            href={`/categorias/${category.href}`}
+                                                            href={`/categorias/${category.slug}`}
                                                             className="flex items-start rounded-lg py-3 px-4 hover:bg-gray-50"
                                                         >
                                                             <div className="ml-2">

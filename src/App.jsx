@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AuthLayout from './layouts/AuthLayout'
 
@@ -9,13 +8,11 @@ import OlvidePassword from './paginas/OlvidePassword'
 import ConfirmarCuenta from './paginas/ConfirmarCuenta'
 import Principal from './PrincipalComp/Principal'
 
-
 import { AuthProvider } from './context/AuthProvider'
 import FormularioProducto from './paginas/FormularioProducto'
 import Galeria from './PrincipalComp/Galeria'
 import RutaProtegida from './layouts/RutaProtegida'
 import General from './PrincipalComp/General'
-
 
 function App() {
   return (
@@ -37,7 +34,6 @@ function App() {
             <Route index element={<General />} />
             <Route path="galeria" element={<Galeria />} />
           </Route>
-
         </Routes>
       </AuthProvider>
     </BrowserRouter>
