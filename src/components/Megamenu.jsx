@@ -79,7 +79,10 @@ const Megamenu = () => {
                             </Popover>
                         </li>
                         <li>
-                            <a href="/login">Iniciar sesión</a>
+                            {
+                                !auth.token && ( 
+                            <a href="/login">Iniciar sesión</a>)
+                            }
                         </li>
 
                         <li>
@@ -87,7 +90,6 @@ const Megamenu = () => {
                                 auth.token && (
                                     <button
                                         type='button'
-                                        className="text-white text-sm uppercase font-bold"
                                         onClick={cerrarSesion}
                                     >
                                         Cerrar Sesion
